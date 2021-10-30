@@ -1,10 +1,40 @@
-@use '../globals/' as *;
-@use '../util/' as *;
+@use "../globals/" as *;
+@use "../util/" as *;
 
 .card {
-    background-color: $Dark-desaturated-blue;
-    width: 1100px;
-    height: 450px;
-    border-radius: 5px;
+  font-family: $Inter;
+  background-color: $Dark-desaturated-blue;
+  overflow: hidden;
+  width: 1100px;
+  height: 450px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row-reverse;
 
+  &-body {
+    padding: 75px;
+    padding-right: 120px;
+  }
+
+  span {
+    color: $Soft-violet;
+  }
+
+  h1,
+  h3 {
+    color: $White;
+  }
+
+  p {
+    color: $Slightly-transparent-white;
+  }
+
+  div > p {
+    color: $Slightly-transparent-white-darker;
+  }
 }
