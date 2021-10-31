@@ -2,11 +2,10 @@
 @use "../util/" as *;
 
 .card {
-  font-family: $Inter;
   background-color: $Dark-desaturated-blue;
   overflow: hidden;
-  width: 1100px;
-  height: 450px;
+  width: 1110px;
+  height: 446px;
   border-radius: 10px;
   position: absolute;
   top: 50%;
@@ -16,25 +15,53 @@
   display: flex;
   flex-direction: row-reverse;
 
+  .overlay {
+    width: 125%;
+    background-image: url(../../../images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   &-body {
-    padding: 75px;
-    padding-right: 120px;
+    margin: 75px 120px 0px 70px;
   }
 
-  span {
-    color: $Soft-violet;
-  }
-
-  h1,
-  h3 {
+  &-title {
     color: $White;
+    font-family: $Lexend-Deca;
+    margin-bottom: 30px;
+
+    & > span {
+      color: $Soft-violet;
+    }
   }
 
-  p {
+  &-text {
     color: $Slightly-transparent-white;
+    font-family: $Inter;
+    line-height: 1.5rem;
   }
 
-  div > p {
-    color: $Slightly-transparent-white-darker;
+  &-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    & > div {
+      margin-top: 75px;
+    }
+
+    & > div > h2 {
+      color: $White;
+      font-family: $Inter;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+    & > div > p {
+      color: $Slightly-transparent-white-darker;
+      font-family: $Inter;
+      text-transform: uppercase;
+      margin-top: 16px;
+    }
   }
 }
